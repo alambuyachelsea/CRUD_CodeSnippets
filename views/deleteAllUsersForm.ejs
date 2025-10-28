@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('header') -%>
+
+  <main>
+    <link rel="stylesheet" href="/css/confirmDelete.css">
+
+    <h2>Delete All Users</h2>
+
+    <p class="warning">Are you absolutely sure you want to delete all users?</p>
+
+    <form method="post" action="/admin/deleteAllUsers" class="confirm-form">
+      <div class="form-actions">
+        <input type="submit" name="doit" value="Delete All Users" class="danger-button">
+        <a href="/admin" class="cancel-link">Cancel</a>
+      </div>
+    </form>
+  
+  </main>
+  
+  <%- include('footer') -%>
+</html>

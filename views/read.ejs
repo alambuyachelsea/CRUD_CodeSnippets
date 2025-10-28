@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <main>
+
+    <link rel="stylesheet" href="/css/read.css">
+    
+      <h1>All Snippets</h1>
+
+      <% if (snippets.length === 0) { %>
+
+        <p>No snippets exist.</p>
+
+      <% } else { %>
+
+        <ul class="snippet-list">
+
+          <% snippets.forEach(snippet => { %>
+            <li class="snippet-card">
+              <p><strong>User:</strong> <%= snippet.userAcronym %></p>
+              <p><strong>Title:</strong> <%= snippet.title %></p>
+              <p><strong>Code:</strong></p>
+              <pre class="code-block"><%= snippet.code %></pre>
+
+              <% if (locals.user && locals.user.acronym === snippet.userAcronym) { %>
+
+                <div class="button-group">
+                  <form method="GET" action="/crud/update/<%= snippet._id %>" class="inline-form">
+                    <input type="submit" value="Edit">
+                  </form>
+                  <form method="GET" action="/crud/delete/<%= snippet._id %>" class="inline-form">
+                    <input type="submit" name="deleteIt" value="Delete">
+                  </form>
+                </div>
+                
+              <% } %>
+            </li>
+          <% }) %>
+        </ul>
+      <% } %>
+    
+  </main>
+</html>

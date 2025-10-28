@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%- include('header') -%>
+
+  <main>
+    <link rel="stylesheet" href="/css/home.css">
+
+    <h2>Welcome</h2>
+    
+    <p>This site is protected by login. The following routes are protected.</p>
+    
+    <ul>
+        <li><a href="/user">/user</a> (show details on the user loggedin)</li>
+        <li><a href="/admin">/admin</a> (only admin has access)</li>
+    </ul>
+    
+    <p>The following routes are public.</p>
+    
+    <ul>
+        <li><a href="/user/home">/user/home</a> (this page)</li>
+        <li><a href="/user/login">/user/login</a> (to login)</li>
+        <li><a href="/user/logout">/user/logout</a> (to logout)</li>
+        <li><a href="/crud">/crud</a> (to view code Snippets)</li>
+    </ul>
+  </main>
+
+  <%- include('footer') -%>
+
+</html>

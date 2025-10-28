@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('header') -%>
+  
+  <main>
+    <link rel="stylesheet" href="/css/register.css">
+    
+    <form method="post" class="register-form">
+      <div class="form-group">
+        <label for="name">User Name</label>
+        <input type="text" name="name" id="name" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="acronym">Acronym</label>
+        <input type="text" name="acronym" id="acronym" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required>
+      </div>
+  
+      <div class="form-actions">
+        <input type="submit" value="Register">
+      </div>
+    </form>
+
+    
+
+  </main>
+  <%- include('footer') -%>
+</html>

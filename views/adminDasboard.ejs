@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <%- include('header') -%>
+
+  <main>
+    <link rel="stylesheet" href="/css/admin.css">
+    <h2>Admin Area</h2>
+
+    <section class="admin-actions">
+      <form method="GET" action="/admin/deleteAllUsers" class="inline-form">
+        <input type="submit" name="deleteIt" value="Clear Users">
+      </form>
+
+      <form method="GET" action="/admin/deleteAllSnippets" class="inline-form">
+        <input type="submit" name="deleteIt" value="Clear Snippets">
+      </form>
+    </section>
+
+    <section class="user-list">
+      <h3>All Users</h3>
+      <% if (users.length == 1) { %>
+        <p>There are no users saved</p>
+      <% } else { %>
+        <ul>
+          <% users.forEach(user => { %>
+            <% if (user.role !== 'admin') { %>
+              <li class="user-entry">
+                <%= `${user.acronym}: ${user.name}` %>
+                <form method="GET" action="/admin/deleteUser/<%= user._id %>" class="inline-form">
+                  <input type="submit" name="deleteIt" value="Delete">
+                </form>
+              </li>
+            <% } %>
+          <% }) %>
+        </ul>
+      <% } %>
+    </section>
+
+    <section class="snippet-list">
+      <h3>All Snippets</h3>
+      <% if (snippets.length == 0) { %>
+        <p>There are no saved snippets</p>
+      <% } else { %>
+        <ul>
+          <% snippets.forEach(snippet => { %>
+            <li class="snippet-entry">
+              <p><strong>User:</strong> <%= snippet.userAcronym %></p>
+              <p><strong>Title:</strong> <%= snippet.title %></p>
+              <p><strong>Code:</strong></p>
+              <pre class="code-block"><%= snippet.code %></pre>
+              <form method="GET" action="/admin/deleteSnippet/<%= snippet._id %>" class="inline-form">
+                <input type="submit" name="deleteIt" value="Delete">
+              </form>
+            </li>
+          <% }) %>
+        </ul>
+      <% } %>
+    </section>
+    
+  </main>
+
+  <%- include('footer') -%> 
+  
+</html>

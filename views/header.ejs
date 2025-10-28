@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Snippet Dashboard</title>
+  <link rel="icon" type="image/png" href="/assets/icon.ico">
+  <link rel="stylesheet" href="/css/header.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Orbitron:wght@400..900&display=swap');
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="/">Introduction</a> | 
+    <a href="/admin">Admin area</a> |
+    <a href="/crud">Code Snippets</a> |
+    <a href="/user/create">Create Account</a> |
+    <% if (locals.user && locals.user.acronym) { %>
+    <a href="/user/logout">Logout</a> | <% } else { %>
+    <a href="/user/login">Login</a> | <% } %>
+  </nav>
+  
+  <%- include('flash') -%>
+
+</body>
+</html>

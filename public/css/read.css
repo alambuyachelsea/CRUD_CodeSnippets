@@ -1,0 +1,75 @@
+
+main {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+  font-family: system-ui, sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+.snippet-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.snippet-card {
+  background-color: #f9f9f9;
+  border-left: 4px solid #07c;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.snippet-card p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.code-block {
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  overflow-x: auto;
+  font-family: monospace;
+  white-space: pre-wrap;
+  word-break: break-word;
+  border-radius: 4px;
+  margin-top: 0.25rem;
+}
+
+.button-group {
+  margin-top: 1rem;
+}
+
+.inline-form {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.inline-form input[type="submit"] {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid #07c;
+  background-color: #fff;
+  color: #07c;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.inline-form input[type="submit"]:hover {
+  background-color: #07c;
+  color: #fff;
+}

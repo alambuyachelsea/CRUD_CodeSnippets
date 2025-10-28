@@ -1,0 +1,42 @@
+main {
+  font-family: system-ui, sans-serif;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  padding-left: 1.25rem;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+p {
+  padding-left: 1.25rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+ul {
+  padding-left: 3.35rem;
+  margin-bottom: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: #07c;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
