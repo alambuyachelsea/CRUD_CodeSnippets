@@ -1,8 +1,8 @@
 # B2 CRUD
 
-## Code Snippet Manager API
+## Code Snippet Manager
 
-An Express.js and Mongoose-based API for managing code snippets, users, and admin functions. Includes full CRUD operations, user authentication, and role-based access control. Built with a modular MVC structure and ES Modules.
+An Express.js and Mongoose-based dashboard for managing code snippets, users, and admin functions. Includes full CRUD operations, user authentication, and role-based access control. Built with a modular MVC structure and ES Modules.
 
 The video presentation can be found [here](https://youtu.be/sRXjBEkseeA)
 
